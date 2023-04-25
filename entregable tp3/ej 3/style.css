@@ -1,0 +1,56 @@
+#reloj {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 50px auto;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #segundos, #minutos, #horas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top center;
+    background-color: #333;
+    rotate: 180deg;
+  }
+  
+  #segundos {
+    width: 2px;
+    height: 80px;
+    margin-left: -1px;
+    animation: rotacion 60s linear infinite;
+  }
+  
+  #minutos {
+    width: 4px;
+    height: 70px;
+    margin-left: -2px;
+    animation: rotacion 3600s linear infinite;
+  }
+  
+  #horas {
+    width: 6px;
+    height: 60px;
+    margin-left: -3px;
+    animation: rotacion 43200s linear infinite;
+  }
+  
+  @keyframes rotacion {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .rayita {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: auto;
+    width: 2px;
+    border-style: solid;
+    border-width: 0 0 10px 0;
+    border-color: transparent transparent #333 transparent;
+    transform-origin: top center;
+  }
